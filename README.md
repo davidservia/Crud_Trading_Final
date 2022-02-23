@@ -16,3 +16,6 @@
 El enlace de este crud se tiene en este QR.
 ![image](https://user-images.githubusercontent.com/91873325/155396378-fbbe2377-7440-4ef2-9d56-aaec6b6a9c65.png)
 
+<p>Link video visual del Crud funcionando</p>
+<p>https://youtu.be/3KjU8QCbOWE</p>
+
