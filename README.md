@@ -3,6 +3,7 @@
 <p>https://github.com/davidservia/Crud_Trading</p>
 <p>Este crud es una version de un panel de trading, donde se puede añadir y borrar posiciones, incluye un login.</p>
 <h1>Adjunto imagenes del login y la pagina</h1>
+<video src="https://youtu.be/3KjU8QCbOWE" width="640" height="480"></video>
 <p><img src="https://user-images.githubusercontent.com/91873325/155395861-b5cf15d5-39fa-4119-8902-ed736acf3263.JPG"></p>
 <p> Este es el login y esto el aviso si el login da error</p>
 <p><img src="https://user-images.githubusercontent.com/91873325/155395943-03324dbe-7188-4719-8884-f9bb3f68fee6.JPG"></p>
