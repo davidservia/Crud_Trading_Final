@@ -81,8 +81,8 @@
         <td>
             <!--out.println("<td>" + listado.getString("mercados") + "</td>");-->
         <form method="get" action="modificaMercados.jsp">
-					<input type="hidden" name="Nombre" value="<%=listadomercados.getString("nombre") %>">
-          <input type="hidden" name="nombre" value="<%=listadomercados.getString("pais") %>">
+					<input type="hidden" name="Nombre" value="<%=listadomercados.getString("Nombre") %>">
+          <input type="hidden" name="Pais" value="<%=listadomercados.getString("Pais") %>">
 
           
           

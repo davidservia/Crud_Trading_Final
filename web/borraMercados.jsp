@@ -19,7 +19,7 @@
 Class.forName("com.mysql.jdbc.Driver");
 Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/Trading","root", "");
 Statement s = conexion.createStatement();
-s.execute ("DELETE FROM mercados WHERE Nombre like " + request.getParameter("Nombre"));
+s.execute ("DELETE FROM mercados WHERE Nombre like ' " + request.getParameter("Nombre") + " ' ");
 %>
 <script>document.location = "listadomercados.jsp"</script>
 </body>

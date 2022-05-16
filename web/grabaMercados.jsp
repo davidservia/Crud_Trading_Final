@@ -33,7 +33,7 @@
       Statement s = conexion.createStatement();
       request.setCharacterEncoding("UTF-8");
       
-      String actualizacion = "UPDATE posiciones SET "
+      String actualizacion = "UPDATE mercados SET "
                            + "Pais='" + request.getParameter("Pais")
                            + "' WHERE Nombre=" + (request.getParameter("Nombre"));
       s.execute(actualizacion);

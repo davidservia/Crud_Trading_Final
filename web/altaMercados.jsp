@@ -35,10 +35,10 @@
       numeroDePosicion.last();
       
       if (numeroDePosicion.getRow() != 0) {
-        out.println("Lo siento, no se ha podido dar de alta, ya existe una posicion con el número "
-                    + request.getParameter("posicionID") + ".");
+        out.println("Lo siento, no se ha podido dar de alta, ya existe un mercado "
+                    + request.getParameter("Nombre") + ".");
       } else {
-        String insercion = "INSERT INTO POSICIONES VALUES (" + Nombre
+        String insercion = "INSERT INTO mercados VALUES (" + Nombre
                            + ", '" + request.getParameter("Pais")
                            ;
                            
