@@ -19,3 +19,7 @@ El enlace de este crud se tiene en este QR.
 <p>Link video visual del Crud funcionando</p>
 <p>https://youtu.be/3KjU8QCbOWE</p>
 
+<p> Mejoras del Crud del login con seguridad, y añadido un nav un logout y una tabla nueva de mercados </p>
+<p> nuevo video</p>
+<p>https://youtu.be/mZXjzb1BdiM</p>
+
