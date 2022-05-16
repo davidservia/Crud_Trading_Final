@@ -45,18 +45,17 @@
             </button>
           </div>
         </nav>      
-     
 
 <div class="container text-light">
 			<br><br>			
       <div class="panel-info">
-        <div class="panel-heading text-center"><h2>Panel de posiciones</h2></div>
+        <div class="panel-heading text-center"><h2>Panel de Mercados</h2></div>
         
         <%
           Class.forName("com.mysql.jdbc.Driver");
           Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/trading","root", "");
           Statement s = conexion.createStatement();
-          ResultSet listado = s.executeQuery ("SELECT * FROM posiciones");
+          ResultSet listadomercados = s.executeQuery ("SELECT * FROM mercados");
           
            
                 if (session.getAttribute("usuarioRegistrado") == null) {
@@ -67,41 +66,32 @@
         %>
 
         <table class="table table-info">
-            <tr><th>Nº de Posicion</th><th>Nombre</th><th>Entrada</th><th>Liquidacion</th><th>Mercados</th><th>Añadir/Editar</th><th>Eliminar</th></tr>
-        <form method="get" action="altaPosicion.jsp">
-          <tr><td><input type="text" name="posicionID" size="5"></td>
-              <td><input type="text" name="nombre" size="30"></td>
-              <td><input type="text" name="entrada" size="5"></td>
-              <td><input type="text" name="liquidacion" size="5"></td>
-              <td><input type="text" name="mercados" size="20"></td>
+            <tr><th>Nombre</th><th>Pais</th><th>Añadir/Editar</th><th>Eliminar</th></tr>
+        <form method="get" action="altaMercados.jsp">
+          <tr><td><input type="text" name="Nombre" size="20"></td>
+              <td><input type="text" name="Pais" size="10"></td>
               <td><button type="submit" value="Añadir" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Añadir</button></td><td></td></tr>           
         </form>
         <%
-          while (listado.next()) {
+          while (listadomercados.next()) {
             out.println("<tr><td>");
-            out.println(listado.getString("posicionID") + "</td>");
-            out.println("<td>" + listado.getString("nombre") + "</td>");
-            out.println("<td>" + listado.getString("entrada") + "</td>");
-            out.println("<td>" + listado.getString("liquidacion") + "</td>");
-            out.println("<td>" + listado.getString("NombreMercado") + "</td>");
-            
+            out.println(listadomercados.getString("nombre") + "</td>");
+            out.println("<td>" + listadomercados.getString("pais") + "</td>");
         %>
         <td>
             <!--out.println("<td>" + listado.getString("mercados") + "</td>");-->
-        <form method="get" action="modificaPosicion.jsp">
-					<input type="hidden" name="posicionID" value="<%=listado.getString("posicionID") %>">
-          <input type="hidden" name="nombre" value="<%=listado.getString("nombre") %>">
-          <input type="hidden" name="entrada" value="<%=listado.getString("entrada") %>">
-          <input type="hidden" name="liquidacion" value="<%=listado.getString("liquidacion") %>">
-          <input type="hidden" name="NombreMercado" value="<%=listado.getString("NombreMercado") %>">
+        <form method="get" action="modificaMercados.jsp">
+					<input type="hidden" name="Nombre" value="<%=listadomercados.getString("nombre") %>">
+          <input type="hidden" name="nombre" value="<%=listadomercados.getString("pais") %>">
+
           
           
 					<button type="submit"  class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> Modificar</button>
 				</form>
 				</td>
 				<td>
-        <form method="get" action="borraPosicion.jsp">
-          <input type="hidden" name="posicionID" value="<%=listado.getString("posicionID") %>"/>
+        <form method="get" action="borraMercados.jsp">
+          <input type="hidden" name="Nombre" value="<%=listadomercados.getString("nombre") %>"/>
           <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Eliminar</button>
         </form>
         </td></tr>

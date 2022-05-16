@@ -34,13 +34,10 @@
       request.setCharacterEncoding("UTF-8");
       
       String actualizacion = "UPDATE posiciones SET "
-                           + "nombre='" + request.getParameter("nombre")
-                           + "', entrada=" + Integer.valueOf(request.getParameter("entrada"))
-                           + ", liquidacion=" + Integer.valueOf(request.getParameter("liquidacion"))
-                           + ", NombreMercado='" + request.getParameter("NombreMercado")
-                           + "' WHERE posicionID=" + Integer.valueOf(request.getParameter("posicionID"));
+                           + "Pais='" + request.getParameter("Pais")
+                           + "' WHERE Nombre=" + (request.getParameter("Nombre"));
       s.execute(actualizacion);
-      response.sendRedirect("listado.jsp");
+      response.sendRedirect("listadomercados.jsp");
       
       conexion.close();
     %>

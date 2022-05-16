@@ -37,14 +37,21 @@
                     String name = request.getParameter("CadenaNombre");
                     ResultSet mitrading = u.executeQuery("SELECT * FROM usuario");
                     mitrading.next();
+                    
+                    //atributos usuarios y contrasenia
+                    session.setAttribute("usuarioRegistrado", request.getParameter("CadenaNombre"));
+                    session.setAttribute("contrRegistrado", request.getParameter("CadenaContrasena"));
+                    
                     response.sendRedirect("listado.jsp");
-                }
-            }
+                } //if
+            }//while
             if (!correcto) { // si la contraseña o el usuario son incorrectos, se establece un nuevo valor para la variable de sesion "error" y se abre de nuevo index
                 session.setAttribute("error", "Lo siento, usuario o contraseña incorrectos");
                 response.sendRedirect("index.jsp");
             }
         %>
+        
+        
 
 
 

@@ -22,23 +22,16 @@
     <div class="container">
       <br><br>
       <div class="panel panel-info">
-        <div class="panel-heading text-center">Modificación de posicion</div>
-          <form method="get" action="grabaPosicion.jsp">
-            <div class="form-group"> 
-              <label>&nbsp;&nbsp;Nº de posicion:&nbsp;</label><input type="text" size="5" name="posicionID" value="<%= request.getParameter("posicionID") %>" readonly>
+        <div class="panel-heading text-center">Modificación de Mercados</div>
+          <form method="get" action="grabaMercados.jsp">
+         <div class="form-group"> 
+              <label>&nbsp;&nbsp;Nombre Posicion&nbsp;</label><input type="text" size="20" name="Nombre" value="<%= request.getParameter("Nombre") %>" readonly>
             </div>
             <div class="form-group">
-            <label>&nbsp;&nbsp;Nombre:&nbsp;</label><input type="text" size="35" name="nombre" value="<%= request.getParameter("nombre") %>">
-            </div>
-            <div class="form-group">
-             <label>&nbsp;&nbsp;Entrada:&nbsp;</label><input type="text" size="5" name="entrada" value="<%= request.getParameter("entrada") %>">
-             <label>&nbsp;&nbsp;Liquidacion:&nbsp;</label><input type="text" size="5" name="liquidacion" value="<%= request.getParameter("liquidacion") %>">
-            </div>
-            <div class="form-group">
-             <label>&nbsp;&nbsp;Mercados:&nbsp;</label><input type="text" name="NombreMercado" size="20" value="<%= request.getParameter("NombreMercado") %>">
+            <label>&nbsp;&nbsp;Pais&nbsp;</label><input type="text" size="10" name="Pais" value="<%= request.getParameter("Pais") %>">
             </div>
             <hr>
-            &nbsp;&nbsp;<a href="listado.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</a>
+            &nbsp;&nbsp;<a href="listadomercados.jsp" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span>Cancelar</a>
             <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span>Aceptar</button><br><br>
           </form>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
