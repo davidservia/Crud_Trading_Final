@@ -28,7 +28,7 @@
       String Nombre = request.getParameter("Nombre");
       
       // Comprueba la existencia del número de una posicion introducida
-      String consultaNumPosicion = "SELECT * FROM mercados WHERE Nombre = " + Nombre; 
+      String consultaNumPosicion = "SELECT * FROM mercados WHERE Nombre = '" + Nombre + "'"; 
       
       
       ResultSet numeroDePosicion = s.executeQuery (consultaNumPosicion);
@@ -38,9 +38,9 @@
         out.println("Lo siento, no se ha podido dar de alta, ya existe un mercado "
                     + request.getParameter("Nombre") + ".");
       } else {
-        String insercion = "INSERT INTO mercados VALUES (" + Nombre
-                           + ", '" + request.getParameter("Pais")
-                           ;
+        String insercion = "INSERT INTO mercados VALUES ('" + (request.getParameter("Nombre"))+ "','"
+                           + request.getParameter("Pais") + "')";
+                           
                            
         s.execute(insercion);
         response.sendRedirect("listadomercados.jsp");
