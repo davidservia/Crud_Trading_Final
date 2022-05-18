@@ -27,7 +27,9 @@
     <title>Modificador de Posicion</title>
   </head>
   <body>
+ 
     <%
+       
       Class.forName("com.mysql.jdbc.Driver");
       Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/trading","root", "");
       Statement s = conexion.createStatement();
@@ -35,9 +37,10 @@
       
       String actualizacion = "UPDATE mercados SET "
                            + "Pais='" + request.getParameter("Pais")
-                           + "' WHERE Nombre=" + (request.getParameter("Nombre"));
-      s.execute(actualizacion);
-      response.sendRedirect("listadomercados.jsp");
+                           + "' WHERE Nombre='" + (request.getParameter("Nombre"))+ "'";
+      
+     s.execute(actualizacion);
+     response.sendRedirect("listadomercados.jsp");
       
       conexion.close();
     %>
