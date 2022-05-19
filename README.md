@@ -22,4 +22,6 @@ El enlace de este crud se tiene en este QR.
 <p> Mejoras del Crud del login con seguridad, y añadido un nav un logout y una tabla nueva de mercados </p>
 <p> nuevo video</p>
 <p>https://youtu.be/mZXjzb1BdiM</p>
+<h2>Nuevo video con texto explicativo</h2>
+<p>https://youtu.be/tutIgylEVJM</p>
 
